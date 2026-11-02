@@ -5,7 +5,9 @@ add_executable(HarmonyArchitectTests
     Main.cpp
     TimeSignatureTests.cpp
     ClipSerializationTests.cpp
+    ClipPlayerTests.cpp
     ${CMAKE_SOURCE_DIR}/Source/Core/Clip.cpp
+    ${CMAKE_SOURCE_DIR}/Source/Core/ClipPlayer.cpp
     ${CMAKE_SOURCE_DIR}/Source/Model/ClipState.cpp
 )
 

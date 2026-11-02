@@ -36,6 +36,7 @@ target_sources(HarmonyArchitect PRIVATE
     Source/UI/RhythmTab.cpp
     Source/UI/HarmonyTab.cpp
     Source/Core/Clip.cpp
+    Source/Core/ClipPlayer.cpp
     Source/Model/ClipState.cpp
 )
 
