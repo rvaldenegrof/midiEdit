@@ -35,6 +35,8 @@ target_sources(HarmonyArchitect PRIVATE
     Source/PluginEditor.cpp
     Source/UI/RhythmTab.cpp
     Source/UI/HarmonyTab.cpp
+    Source/Core/Clip.cpp
+    Source/Model/ClipState.cpp
 )
 
 target_include_directories(HarmonyArchitect PRIVATE Source)
@@ -53,3 +55,10 @@ target_link_libraries(HarmonyArchitect
         juce::juce_recommended_lto_flags
         juce::juce_recommended_warning_flags
 )
+
+option(HARMONY_ARCHITECT_BUILD_TESTS "Compilar los tests de Core/Model (Tests/)" ON)
+if (HARMONY_ARCHITECT_BUILD_TESTS)
+    enable_testing()
+    add_subdirectory(Tests)
+    add_test(NAME HarmonyArchitectTests COMMAND HarmonyArchitectTests)
+endif()
